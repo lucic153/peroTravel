@@ -1,0 +1,104 @@
+/* Основные стили для формы регистрации */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Менее закругленные углы */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* Стили для полей формы */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #bbc07a;
+    outline: none;
+}
+
+/* Кнопка отправки формы */
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #bbc07a;
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #777a49;
+}
+
+/* Ссылка для возврата назад */
+.back-button {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.back-button a {
+    color: #bbc07a;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-button a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 22px;
+    }
+
+    .form-group input {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .form-group button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

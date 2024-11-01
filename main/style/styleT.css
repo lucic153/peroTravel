@@ -1,0 +1,339 @@
+ /* главное меню */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+ }
+ ul {
+    list-style: none;
+ }
+ .topmenu {
+    background: white;
+ }
+ .topmenu a {
+    text-decoration: none;
+    display: block;
+    transition: .4s ease-in-out;
+ }
+ .topmenu>li>a {
+    padding: 20px;
+    color: #767676;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+ }
+ .topmenu li a:hover {
+    color: #bbc07a;
+}
+ @media(max-width: 599px) {
+    .topmenu>li>a {
+       padding: 15px 20px;
+    }
+    .submenu li a {
+       padding: 10px 20px;
+       margin: 0 20px;
+    }
+ }
+ @media(min-width: 600px) {
+    .topmenu {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+    .topmenu>li {
+       position: relative;
+    }
+    .topmenu>li:after {
+       content: "";
+       position: absolute;
+       right: 0;
+       width: 1px;
+       height: 12px;
+       background: #d2d2d2;
+       top: 24px;
+       box-shadow: 4px -2px 0 #d2d2d2;
+       transform: rotate(30deg);
+    }
+    .topmenu>li:last-child:after {
+       background: none;
+       box-shadow: none;
+    }
+    .topmenu>li:hover .submenu {
+       visibility: visible;
+       opacity: 1;
+       transform: scale(1);
+    }
+    .submenu li a {
+       text-align: center;
+       padding: 10px 0;
+       margin: 0 10px;
+    }
+ }
+ /* Основной стиль футера */
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 60px 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-logo img {
+    max-width: 150px;
+    margin-bottom: 30px;
+  }
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  .footer-column {
+    flex: 1;
+    padding: 0 20px;
+    min-width: 200px;
+  }
+  .footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  .footer-column ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-column ul li a:hover {
+    color: #fff;
+  }
+  .footer-social a {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  .footer-social a:hover {
+    transform: scale(1.1);
+  }
+  .footer-social img {
+    width: 35px;
+    height: 35px;
+  }
+  .footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    color: #aaa;
+  }
+  .footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+  }
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .footer-columns {
+      flex-direction: column;
+      text-align: center;
+    }
+    .footer-column {
+      margin-bottom: 20px;
+    }
+  }
+  /* Плавные эффекты и анимации */
+  footer {
+    transition: background-color 0.3s;
+  }
+  footer:hover {
+    background-color: #151515;
+  }
+
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили туров */
+.tours {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.tours h2 {
+    width: 100%;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #bbc07a;
+}
+
+.tour-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: calc(30% - 20px); /* Меньше карточки, чтобы было 3 на строке */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Добавлено плавное изменение тени и масштаба */
+}
+
+.tour-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+  transform: translateY(-10px); /* Легкий подъем карточки при наведении */
+}
+
+
+.tour-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    
+}
+
+.tour-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.tour-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.tour-info p {
+    flex-grow: 1;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.tour-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #bbc07a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #898d58;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+    .tour-card {
+        width: calc(45% - 20px); /* Две карточки на строке */
+    }
+}
+
+@media (max-width: 768px) {
+    .tour-card {
+        width: calc(100% - 20px); /* Одна карточка на строке */
+    }
+}
+/* Стили пагинации */
+.pagination {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    display: block;
+    padding: 8px 12px;
+    background-color: #f4f4f9;
+    color: #bbc07a;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #8e925a;
+    color: #fff;
+}
+
+.pagination .active {
+    background-color: #bbc07a;
+    color: #fff;
+}
+
+.pagination .prev,
+.pagination .next {
+    font-weight: bold;
+}
+/* Адаптивные стили для пагинации */
+@media (max-width: 768px) {
+    .pagination ul {
+        flex-wrap: wrap;
+    }
+
+    .pagination li {
+        margin: 5px 2px; /* Уменьшаем отступы для маленьких экранов */
+    }
+
+    .pagination a {
+        padding: 8px 10px; /* Немного уменьшаем размеры кнопок */
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pagination a {
+        padding: 6px 8px; /* Еще сильнее уменьшаем кнопки на очень маленьких экранах */
+        font-size: 12px;
+    }
+
+    .pagination li {
+        margin: 3px 1px; /* Еще меньше отступы */
+    }
+}

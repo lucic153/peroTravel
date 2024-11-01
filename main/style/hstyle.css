@@ -1,0 +1,445 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Профиль пользователя */
+.profile-box {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media(min-width: 768px) {
+  .profile-box {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ddd;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media(min-width: 768px) {
+  .profile-content {
+    flex: 1;
+    text-align: left;
+  }
+}
+
+.profile-content h2 {
+  color: #bbc07a;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.profile-data {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 18px;
+}
+
+.profile-data strong {
+  display: inline-block;
+  width: auto;
+  color: #bbc07a;
+  font-size: 18px;
+}
+
+@media(min-width: 768px) {
+  .profile-data strong {
+    width: 200px;
+  }
+}
+
+/* История путешествий */
+.travel-history {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.travel-history h2 {
+  color: #bbc07a;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: left;
+}
+
+.travel-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media(min-width: 768px) {
+  .travel-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* Стили карточек путешествий */
+.travel-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Стили для отдельных карточек */
+.travel-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.travel-card:hover {
+  transform: scale(1.02);
+}
+
+.travel-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.travel-info {
+  padding: 20px;
+  flex: 1;
+  text-align: left;
+}
+
+.travel-info h3 {
+  margin: 0 0 10px;
+  color: #bbc07a;
+  font-size: 24px;
+}
+
+.travel-info p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+.travel-info .description {
+  color: #666;
+  font-size: 15px;
+}
+
+/* Стили ссылки на фотоальбом */
+.album-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.album-link:hover {
+  color: #388E3C;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .travel-info h3 {
+      font-size: 22px;
+  }
+
+  .travel-info p {
+      font-size: 14px;
+  }
+
+  .travel-info .description {
+      font-size: 13px;
+  }
+}
+
+/* Адаптивные стили для планшетов */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .travel-cards {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+  }
+
+  .travel-info h3 {
+      font-size: 20px;
+  }
+
+  .travel-info p {
+      font-size: 14px;
+  }
+}
+
+
+/* Главное меню */
+ul {
+  list-style: none;
+}
+
+.topmenu {
+  background: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.topmenu li {
+  margin: 0 15px;
+}
+
+.topmenu a {
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  color: #767676;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.topmenu a:hover {
+  color: #bbc07a;
+}
+
+@media (max-width: 599px) {
+  .topmenu a {
+    padding: 15px;
+  }
+}
+
+/* Футер */
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 60px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 30px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media(min-width: 768px) {
+  .footer-columns {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+  min-width: 200px;
+  text-align: center;
+}
+
+@media(min-width: 768px) {
+  .footer-column {
+    text-align: left;
+  }
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: scale(1.1);
+}
+
+.footer-social img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  color: #aaa;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .profile-content {
+    text-align: center;
+  }
+  
+  .travel-card img {
+    width: 100%;
+  }
+
+  .footer-columns {
+    text-align: center;
+  }
+  
+  .travel-info h3 {
+    font-size: 20px;
+  }
+
+  .travel-info p {
+    font-size: 14px;
+  }
+}
+  /* главное меню */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+ }
+ ul {
+    list-style: none;
+ }
+ .topmenu {
+    background: white;
+ }
+ .topmenu a {
+    text-decoration: none;
+    display: block;
+    transition: .4s ease-in-out;
+ }
+ .topmenu>li>a {
+    padding: 20px;
+    color: #767676;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+ }
+ .topmenu li a:hover {
+    color: #bbc07a;
+}
+ @media(max-width: 599px) {
+    .topmenu>li>a {
+       padding: 15px 20px;
+    }
+    .submenu li a {
+       padding: 10px 20px;
+       margin: 0 20px;
+    }
+ }
+ @media(min-width: 600px) {
+    .topmenu {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+    }
+    .topmenu>li {
+       position: relative;
+    }
+    .topmenu>li:after {
+      content: "";
+       position: absolute;
+       right: 0;
+       width: 1px;
+       height: 12px;
+       background: #d2d2d2;
+       top: 24px;
+       box-shadow: 4px -2px 0 #d2d2d2;
+       transform: rotate(30deg);
+    }
+    .topmenu>li:last-child:after {
+       background: none;
+       box-shadow: none;
+    }
+    .topmenu>li:hover .submenu {
+       visibility: visible;
+       opacity: 1;
+       transform: scale(1);
+    }
+    .submenu li a {
+       text-align: center;
+       padding: 10px 0;
+       margin: 0 10px;
+    }
+ }
